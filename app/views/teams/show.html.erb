@@ -7,8 +7,9 @@
 
 <p>
   <strong>flag:</strong>
-  <%= image_tag @team.flag.url(:thumb) %>
+  <%= image_tag @team.flag.url(:medium) %>
 </p>
 
+<%= link_to 'New Team', new_team_path %><br>
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
