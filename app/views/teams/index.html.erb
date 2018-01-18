@@ -2,18 +2,24 @@
 
 <h1>Teams</h1>
 
+<p><b><%= link_to 'New Team', new_team_path %></b></p>
+
 <table class="table table-hover table-bordered">
   <thead>
     <tr>
+      <center>
+      <th>Id</th>
       <th>Nome</th>
       <th>Escudo / Bandeira</th>
-      <th colspan="3"></th>
+      <th colspan="3">Funções</th>
+    </center>
     </tr>
   </thead>
 
   <tbody>
     <% @teams.each do |team| %>
       <tr>
+        <td><%= team.id %></td>
         <td><%= team.nome %></td>
         <td><%= image_tag(team.flag.url(:thumb)) %></td>
         <td><%= link_to 'Show', team %></td>
@@ -26,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Team', new_team_path %>
+
