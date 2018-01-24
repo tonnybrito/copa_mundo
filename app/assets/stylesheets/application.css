@@ -16,3 +16,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+th {
+  text-align: center;
+}
+
+
+td {
+  font-size: 80%;
+  font-weight: bold;
+}
+

@@ -21,6 +21,12 @@
     <%= form.file_field :flag %>
   </div>
 
+  <div class="field">
+    <%= form.label :team_id, "teste" %>
+    <%= form.collection_select(:continent_id, Continent.all, :id, :nome, {:include_blank => true}) %>
+  </div>
+
+
   <div class="actions">
     <%= form.submit %>
   </div>

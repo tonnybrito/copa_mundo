@@ -10,16 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180116120644) do
+ActiveRecord::Schema.define(version: 20180122164541) do
+
+  create_table "continents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "nome", limit: 50
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "teams", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "nome"
+    t.string "nome", limit: 50
     t.string "flag_file_name"
     t.string "flag_content_type"
     t.integer "flag_file_size"
     t.datetime "flag_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "continent_id"
+    t.index ["continent_id"], name: "index_teams_on_continent_id"
   end
 
+  add_foreign_key "teams", "continents"
 end
