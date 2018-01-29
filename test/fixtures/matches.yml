@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_team_id: 1
+  goal_home: 1
+  aways_team_id: 1
+  goal_aways: 1
+
+two:
+  home_team_id: 1
+  goal_home: 1
+  aways_team_id: 1
+  goal_aways: 1
