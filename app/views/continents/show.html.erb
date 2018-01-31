@@ -5,5 +5,7 @@
   <%= @continent.nome %>
 </p>
 
+<b><%= link_to 'New Continent', new_continent_path %></b><br><br>
+
 <%= link_to 'Edit', edit_continent_path(@continent) %> |
 <%= link_to 'Back', continents_path %>

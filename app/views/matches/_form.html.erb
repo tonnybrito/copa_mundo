@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :home_team_id %>
-    <%= form.number_field :home_team_id, id: :match_home_team_id %>
+    <%= form.label :home_team, "teste" %>
+    <%= form.collection_select(:home_team_id, Team.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
@@ -21,9 +21,9 @@
     <%= form.number_field :goal_home, id: :match_goal_home %>
   </div>
 
-  <div class="field">
-    <%= form.label :aways_team_id %>
-    <%= form.number_field :aways_team_id, id: :match_aways_team_id %>
+ <div class="field">
+    <%= form.label :aways_team, "teste" %>
+    <%= form.collection_select(:aways_team_id, Team.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
@@ -35,3 +35,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+
