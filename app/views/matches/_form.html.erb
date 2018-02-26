@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :home_team, "teste" %>
+    <%= form.label :home_team, "teste01" %>
     <%= form.collection_select(:home_team_id, Team.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
@@ -22,13 +22,18 @@
   </div>
 
  <div class="field">
-    <%= form.label :aways_team, "teste" %>
+    <%= form.label :aways_team, "teste02" %>
     <%= form.collection_select(:aways_team_id, Team.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="field">
     <%= form.label :goal_aways %>
     <%= form.number_field :goal_aways, id: :match_goal_aways %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stadium, "teste03" %>
+    <%= form.collection_select(:stadium_id, Stadium.all, :id, :nome, {:include_blank => true}) %>
   </div>
 
   <div class="actions">

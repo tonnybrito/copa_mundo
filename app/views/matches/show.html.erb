@@ -2,7 +2,7 @@
 
 <p>
   <strong>Home team:</strong>
-  <%= @match.home_team_id %>
+  <%= @match.home_team.nome %>
 </p>
 
 <p>
@@ -12,13 +12,20 @@
 
 <p>
   <strong>Aways team:</strong>
-  <%= @match.aways_team_id %>
+  <%= @match.aways_team.nome %>
 </p>
 
 <p>
   <strong>Goal aways:</strong>
   <%= @match.goal_aways %>
 </p>
+
+<p>
+  <strong>Stadium:</strong>
+  <%= @match.stadium.nome %>
+</p>
+
+<b><%= link_to 'New Match', new_match_path %></b><br><br>
 
 <%= link_to 'Edit', edit_match_path(@match) %> |
 <%= link_to 'Back', matches_path %>
