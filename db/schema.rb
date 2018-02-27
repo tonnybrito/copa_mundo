@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226194936) do
+ActiveRecord::Schema.define(version: 20180227181519) do
 
   create_table "continents", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "nome"
@@ -27,8 +27,17 @@ ActiveRecord::Schema.define(version: 20180226194936) do
     t.datetime "updated_at", null: false
     t.bigint "team_id"
     t.bigint "stadium_id"
+    t.bigint "phase_id"
+    t.index ["phase_id"], name: "index_matches_on_phase_id"
     t.index ["stadium_id"], name: "index_matches_on_stadium_id"
     t.index ["team_id"], name: "index_matches_on_team_id"
+  end
+
+  create_table "phases", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "year"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "stadia", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -49,6 +58,7 @@ ActiveRecord::Schema.define(version: 20180226194936) do
     t.index ["continent_id"], name: "index_teams_on_continent_id"
   end
 
+  add_foreign_key "matches", "phases"
   add_foreign_key "matches", "stadia"
   add_foreign_key "matches", "teams"
   add_foreign_key "teams", "continents"

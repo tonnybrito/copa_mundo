@@ -20,9 +20,16 @@ th {
   text-align: center;
 }
 
-
 td {
-  font-size: 80%;
+  text-align: center;
+  font-size: 90%;
   font-weight: bold;
+}
+
+.red {
+  text-align: center;
+  font-size: 90%;
+  font-weight: bold;
+  color: red;
 }
 

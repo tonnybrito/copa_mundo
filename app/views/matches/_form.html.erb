@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+   <div class="field">
+    <%= form.label :phase, "teste01" %>
+    <%= form.collection_select(:phase_id, Phase.all, :id, :name, {:include_blank => true}) %>
+  </div>
+
   <div class="field">
     <%= form.label :home_team, "teste01" %>
     <%= form.collection_select(:home_team_id, Team.all, :id, :nome, {:include_blank => true}) %>

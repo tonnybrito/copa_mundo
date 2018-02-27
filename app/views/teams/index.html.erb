@@ -19,9 +19,9 @@
     <% @teams.each do |team| %>
       <tr>
         <td><%= team.id %></td>
-        <td><%= team.nome %></td>
+        <td class="red"><%= team.nome %></td>
         <td><%= image_tag(team.flag.url(:thumb)) %></td>
-        <td><%= team.continent.nome %></td>
+        <td class="red"><%= team.continent.nome %></td>
         <td><%= link_to 'Show', team %></td>
         <td><%= link_to 'Edit', edit_team_path(team) %></td>
         <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -69,6 +69,6 @@ class StadiaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stadium_params
-      params.require(:stadium).permit(:nome, :cidade)
+      params.require(:stadium).permit(:nome)
     end
 end
