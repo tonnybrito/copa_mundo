@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "home#index"
+
   resources :phases
   resources :matches
   resources :stadia
